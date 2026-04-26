@@ -4,23 +4,19 @@
 
 
 # ── IMAGE PROCESSING ─────────────────────────────────────────
-opencv-python>=4.9.0          # camera capture, resize, draw bounding boxes
+opencv-python>=4.9.0          # camera capture, resize, draw label on frame
 numpy>=1.26.0                 # pixel array math, normalization
-Pillow>=10.3.0                # image format conversion
+Pillow>=10.3.0                # image loading and format conversion
 albumentations>=1.4.0         # training augmentation (flip, rotate, brightness)
-scikit-image>=0.22.0          # extra filters — Sobel, Gaussian, morphology
-
-
+ 
+ 
 # ── MODEL & TRAINING ─────────────────────────────────────────
-torch>=2.2.0                  # PyTorch core — layers, training loop, autograd
-torchvision>=0.17.0           # dataset loaders, transforms, pretrained backbones
-ultralytics>=8.2.0            # YOLOv8 — base backbone for custom model training
-onnxruntime>=1.18.0           # run ONNX model at inference (no GPU needed)
-matplotlib>=3.8.0             # plot precision/recall curves, confusion matrix
-seaborn>=0.13.0               # confusion matrix heatmaps
-pandas>=2.2.0                 # manage dataset CSVs and annotation files
-PyYAML>=6.0.1                 # read data.yaml config (required by YOLO)
+torch>=2.2.0                  # PyTorch core — define CNN layers, training loop
+torchvision>=0.17.0           # dataset loaders, transforms (ToTensor, Normalize)
+matplotlib>=3.8.0             # plot training loss and accuracy curves
+pandas>=2.2.0                 # manage dataset CSV files and class labels
 tqdm>=4.66.0                  # progress bars during training epochs
+scikit-learn>=1.4.0           # confusion matrix, train/val split utility
 
 
 # ── NLP — ready made ─────────────────────────────────────────
