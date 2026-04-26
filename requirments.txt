@@ -1,0 +1,34 @@
+#  Object Recognition + TTS — requirements.txt
+#  Install with: pip install -r requirements.txt
+#  Python 3.10+ recommended
+
+
+# ── IMAGE PROCESSING ─────────────────────────────────────────
+opencv-python>=4.9.0          # camera capture, resize, draw bounding boxes
+numpy>=1.26.0                 # pixel array math, normalization
+Pillow>=10.3.0                # image format conversion
+albumentations>=1.4.0         # training augmentation (flip, rotate, brightness)
+scikit-image>=0.22.0          # extra filters — Sobel, Gaussian, morphology
+
+
+# ── MODEL & TRAINING ─────────────────────────────────────────
+torch>=2.2.0                  # PyTorch core — layers, training loop, autograd
+torchvision>=0.17.0           # dataset loaders, transforms, pretrained backbones
+ultralytics>=8.2.0            # YOLOv8 — base backbone for custom model training
+onnxruntime>=1.18.0           # run ONNX model at inference (no GPU needed)
+matplotlib>=3.8.0             # plot precision/recall curves, confusion matrix
+seaborn>=0.13.0               # confusion matrix heatmaps
+pandas>=2.2.0                 # manage dataset CSVs and annotation files
+PyYAML>=6.0.1                 # read data.yaml config (required by YOLO)
+tqdm>=4.66.0                  # progress bars during training epochs
+
+
+# ── NLP — ready made ─────────────────────────────────────────
+inflect>=7.0.0                # handles plurals automatically (1 cat vs 2 cats)
+
+
+# ── TTS — ready made ─────────────────────────────────────────
+pyttsx3>=2.90                 # offline TTS — no internet or API key needed
+gTTS>=2.5.1                   # Google TTS — better voice quality, needs internet
+pygame>=2.5.2                 # audio playback for gTTS output
+
